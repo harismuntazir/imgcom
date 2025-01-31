@@ -1,0 +1,2 @@
+[console_scripts]
+imgcom = imgcom_harismuntazir.compress:main

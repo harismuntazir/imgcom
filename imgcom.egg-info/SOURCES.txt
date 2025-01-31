@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+imgcom.egg-info/PKG-INFO
+imgcom.egg-info/SOURCES.txt
+imgcom.egg-info/dependency_links.txt
+imgcom.egg-info/entry_points.txt
+imgcom.egg-info/requires.txt
+imgcom.egg-info/top_level.txt
+imgcom_harismuntazir/__init__.py
+imgcom_harismuntazir/compress.py
