@@ -7,38 +7,30 @@ on:
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read  # Needed to checkout the code
-      id-token: write # Needed for trusted publishing
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.x'  # Or specify a version like '3.9'
+          python-version: '3.x'
 
       - name: Install dependencies
-        run: python -m pip install --upgrade pip build twine
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
 
       - name: Build distribution
         run: python -m build
 
       - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          username: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          distributions: dist/*
-        id: pypi # Add an ID to the step
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: twine upload dist/*
 
-      - name: Verify successful publish (Optional but recommended)
-        if: steps.pypi.outcome == 'success'
+      - name: Verify successful publish
+        if: success()
         run: echo "Successfully published to PyPI!"
-
-      - name: Verify GitHub Pages deployment (Optional)
-        if: github.event_name == 'release' && github.event.action == 'created'
-        uses: actions/deploy-pages@v2
-        with:
-          artifact-dir: dist
