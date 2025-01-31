@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "imgcom"
-version = "1.5.0"
+version = "1.6.0"
 authors = [{name = "Haris Muntazir", email = "haris.0813.m@gmail.com"}]
 description = "A command-line tool to compress images to your desired file size without losing much of the image quality."
 readme = "README.md"
@@ -20,9 +20,14 @@ dependencies = [
 ]
 
 [project.scripts]
-imgcom = "imgcom_harismuntazir.compress:main"  
+imgcom = "imgcom_harismuntazir.compress:main"
 
 [tool.setuptools]
-packages = ["imgcom_harismuntazir"]  
+packages = ["imgcom_harismuntazir"]
 [tool.setuptools.package-data]
 "*" = ["LICENSE", "README.md"]
+
+[project.urls]
+"Homepage" = "https://github.com/harismuntazir/imgcom"
+"Bug Tracker" = "https://github.com/harismuntazir/imgcom/issues"  
+"Source Code" = "https://github.com/harismuntazir/imgcom" 

@@ -1,6 +1,6 @@
 Metadata-Version: 2.2
 Name: imgcom
-Version: 1.5.0
+Version: 1.6.0
 Summary: A command-line tool to compress images to your desired file size without losing much of the image quality.
 Author-email: Haris Muntazir <haris.0813.m@gmail.com>
 License: MIT License
@@ -24,6 +24,9 @@ License: MIT License
         LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
+Project-URL: Homepage, https://github.com/harismuntazir/imgcom
+Project-URL: Bug Tracker, https://github.com/harismuntazir/imgcom/issues
+Project-URL: Source Code, https://github.com/harismuntazir/imgcom
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent

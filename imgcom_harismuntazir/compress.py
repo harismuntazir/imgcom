@@ -44,7 +44,7 @@ def main():
         sys.exit(1)
 
     if sys.argv[1] == "--version":
-        print("Installed imgcom Version 1.5.0")
+        print("Installed imgcom Version 1.6.0")
         sys.exit(0)
     
     if sys.argv[1] == "--about":
